@@ -12,7 +12,7 @@ st.title("🚀 Langflow Astra API - Climate Risk Assessment")
 user_input = st.text_input("💬 Enter your request:", "give me 1 week pune trip plan according to todays date")
 
 # Get URL and token from environment, fall back to runtime input in sidebar
-default_url = os.getenv("LANGFLOW_URL", "")
+default_url = os.getenv("LANGFLOW_URL", "https://astra.datastax.com/langflow/4346ee0f-2d03-4a37-a3d0-9bc883dd52ac/flow/7bbbae4d-8c24-41a7-8a68-69ed2299de67")
 default_token = os.getenv("ASTRA_TOKEN", "")
 
 st.sidebar.header("Configuration")
@@ -99,3 +99,4 @@ if st.button("Send to Langflow"):
 
 st.markdown("---")
 st.info("Do not commit secrets to source control. Use a .env file or the sidebar to provide the token.")
+
